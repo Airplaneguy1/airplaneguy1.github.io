@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How we test languages | Momentum</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:48rem;margin:2rem auto;padding:0 1rem;color:#1b1b1b}h1,h2,h3{line-height:1.25}blockquote{margin:1rem 0;padding:.75rem 1rem;background:#f3f5f8;border-left:4px solid #14213d}a{color:#0b5cad}</style></head>
+<body>
+<p><a href="index.html#languages">&larr; Language table</a></p>
+<h1>How we test languages</h1>
+<p>Momentum Core 1.0 for Mac and Windows is expected in December 2026. This page explains exactly how the numbers in the language table are produced, so you can judge them or repeat the test.</p>
+<h2>The method</h2>
+<ol>
+<li>For each language profile we give Momentum one of two small command-line briefs, alternating between them, for ten runs.</li>
+<li>Momentum writes the program, builds it, runs the tests it wrote itself and repairs failures. A run counts as passed if it builds and passes its own tests within four repair rounds.</li>
+<li>Afterwards the passing programs are run against a separate check that Momentum did not write. That second figure is shown in the table as the independent check.</li>
+<li>All runs use one model (qwen3.6:27b) on our own test machine, with the test setting temperature 0.7. Momentum itself runs at 0.</li>
+<li>A profile with fewer than ten runs, or below 9 of 10, is labelled Unverified. A profile with no result is shown as In development and testing.</li>
+</ol>
+<h2>The two briefs, word for word</h2>
+<h3>Brief A: Count lines, words and characters</h3><blockquote>A command-line word counter. Given a text file path, print the number of lines, words and characters, like wc. With no path, read standard input. Report a missing file with a clear error and exit code 1.</blockquote><p>Required behaviours:</p><ul><li>Count lines, words and characters of a file</li><li>Read standard input when no path is given</li><li>Report a missing file and exit 1</li></ul><h3>Brief B: Summarise a list of integers</h3><blockquote>A command-line number summary tool. Given a text file path, read one integer per line and print the count, the sum, the minimum, the maximum and the average with exactly two decimals, in that order. With no path, read standard input. Ignore empty lines. If a line is not a valid integer, report its line number with a clear error and exit with code 2. If the input holds no integers, report that and exit with code 2. Report a missing file with a clear error and exit code 1. Integers can be negative and large; the sum must not overflow for values up to 2147483647.</blockquote><p>Required behaviours:</p><ul><li>Print the count, sum, minimum, maximum and average (two decimals) of the integers in a file</li><li>Read standard input when no path is given</li><li>Ignore empty lines</li><li>Report a line that is not an integer, with its line number, and exit 2</li><li>Report input with no integers and exit 2</li><li>Report a missing file and exit 1</li></ul>
+<h2>Terms used in the language table</h2>
+<ul>
+<li><strong>Hygiene stop:</strong> an automatic scan of the programs the model writes looks for words that suggest secrets or keys. If it matches, the study stops, a person reads the matching lines (not the program) and decides whether to continue. A stop does not by itself count as a pass or a fail.</li>
+<li><strong>Allowed scanner exception:</strong> a pattern the scan flags that was reviewed in advance and judged harmless, so the run continues.</li>
+<li><strong>Retry-gate decline:</strong> our study tool refused a retry because it read the graphics processor as busy. The run ended before the model could finish repairing, so it is counted as not passed and noted.</li>
+<li><strong>Unverified:</strong> fewer than ten runs, or fewer than 9 of 10 passing, so the language is shown but not endorsed.</li>
+</ul>
+<h2>What we do not publish</h2>
+<p>The independent check is deliberately not published. If the answer key were public, a model or a user could tune to it and it would stop telling you anything. We publish its results, not its contents. Our internal test harness is also not published, because it is not needed to repeat the briefs and contains machine-specific settings.</p>
+<h2>What these numbers are not</h2>
+<p>They are observed rates on two small briefs, one model and one machine. They are not guarantees, they say nothing about other briefs or models, and no profile is called Qualified or supported until it meets the bar in full.</p>
+<h2>Repeat it yourself</h2>
+<p>You can give these briefs to any setup you like and count how many of ten runs build and pass. If you want to share your numbers, tell us the model, the setting and the count. Reports from outside will be listed separately and labelled community-reported, never mixed into our figures.</p>
+</body></html>

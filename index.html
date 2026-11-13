@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Momentum — AI-driven, verification-centered software engineering.">
+  <title>Momentum — Verification-Centered Software Engineering</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/momentum-icon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/momentum-icon-180.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="workflow.css?v=20261027">
+</head>
+<body><div role="region" aria-label="Release announcement" style="background:#14213d;color:#fff;text-align:center;padding:10px 16px;font:600 15px/1.4 system-ui,sans-serif">Momentum Core 1.0 for Mac and Windows is expected in December 2026. <a href="privacy.html" style="color:#9ad1ff">Privacy</a></div>
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+
+  <header class="site-header shell">
+    <a class="brand" href="#top" aria-label="Momentum home">
+      <img src="assets/momentum-logo.png" alt="" class="brand-logo">
+      <span>Momentum</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#why">Why Momentum</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#core">Core 1.0</a>
+      <a href="#languages">Languages</a>
+      <a href="#models">Models</a>
+      <a href="#pro">Pro</a>
+      <a href="#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a class="nav-cta" href="#availability">Availability</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="pill">Momentum Core 1.0 · Mac and Windows</div>
+        <h1>
+          Build with AI.<br>
+          <span>Measure progress by verified outcomes.</span>
+        </h1>
+        <p class="hero-lede">
+          Fast generation is not the finish line. Momentum helps developers make software changes
+          reviewable, bounded, testable, and supported by evidence from the relevant workflow.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#workflow">Explore the workflow</a>
+          <a class="button secondary" href="#availability">Planned introductory price $69.95</a>
+        </div>
+        <div class="trust-row">
+          <span>Verified progress</span>
+          <span>Bounded execution</span>
+          <span>Reviewable evidence</span>
+        </div>
+      </div>
+
+      <div class="hero-product">
+        <div class="logo-lockup">
+          <img src="assets/momentum-logo.png" alt="" class="hero-logo-clean">
+          <div class="logo-text">
+            <span class="logo-kicker">Momentum</span>
+            <strong>Core 1.0</strong>
+            <small>Verification-centered software engineering</small>
+          </div>
+        </div>
+
+        <div class="verification-panel">
+          <div class="verification-titlebar">
+            <div>
+              <span class="eyebrow-small">Current verification</span>
+              <strong>Ready to review</strong>
+            </div>
+            <span class="status good">Ready</span>
+          </div>
+
+          <div class="verify-grid">
+            <div class="verify-item">
+              <span>01</span>
+              <div><strong>Project configuration</strong><small>Validated</small></div>
+            </div>
+            <div class="verify-item">
+              <span>02</span>
+              <div><strong>Preflight</strong><small>Passed</small></div>
+            </div>
+            <div class="verify-item">
+              <span>03</span>
+              <div><strong>Build</strong><small>Completed</small></div>
+            </div>
+            <div class="verify-item">
+              <span>04</span>
+              <div><strong>Evidence</strong><small>Preserved</small></div>
+            </div>
+          </div>
+
+          <div class="verification-footer">
+            <span>Project state → Preflight → Build/Test → Evidence</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="credibility-strip shell" aria-label="Momentum product principles">
+      <div><strong>Explicit</strong><span>Commands and configuration</span></div>
+      <div><strong>Bounded</strong><span>Authority and execution</span></div>
+      <div><strong>Reviewable</strong><span>Evidence and diagnostics</span></div>
+      <div><strong>Cross-platform minded</strong><span>One engine, platform-specific edges</span></div>
+    </section>
+
+    <section class="statement shell" id="why">
+      <p class="section-kicker">Why Momentum</p>
+      <h2>AI can produce code faster than people can economically inspect every line.</h2>
+      <div class="statement-grid">
+        <p>
+          That changes the engineering problem. Speed alone is not enough;
+          teams need trustworthy evidence about what changed, what ran, and what passed.
+        </p>
+        <p>
+          Momentum is being built to make those checks part of the normal workflow rather than an afterthought.
+        </p>
+      </div>
+    </section>
+
+    <section class="workflow shell" id="workflow" aria-labelledby="workflow-heading">
+      <div class="section-head">
+        <p class="section-kicker">How Momentum works</p>
+        <h2 id="workflow-heading">Understand first.<br>Make every next step explicit.</h2>
+        <p class="workflow-intro">One shared engine turns a project and an engineering goal into an inspected, explainable workflow. Each decision carries its evidence forward.</p>
+      </div>
+      <div class="workflow-caption"><span class="flow-label">Current CLI workflow</span><span>Inspect · Plan · Preview</span></div>
+      <div class="workflow-map">
+        <ol class="workflow-path" aria-label="Current workflow, in order">
+          <li><span class="step-index">01</span><div><h3>Bring your project and goal</h3><p>Start with the project configuration and the work you intend to do.</p></div><span class="step-tag">Input</span></li>
+          <li><span class="step-index">02</span><div><h3>Validate the configuration</h3><p>Check the project manifest before contacting the target.</p></div><span class="step-tag">Check</span></li>
+          <li><span class="step-index">03</span><div><h3>Inspect the environment</h3><p>Establish the target state and available capabilities.</p></div><span class="step-tag">Observe</span></li>
+          <li><span class="step-index">04</span><div><h3>Resolve providers and plan</h3><p>Match engineering intent to available tools and an explainable workflow.</p></div><span class="step-tag">Plan</span></li>
+          <li><span class="step-index">05</span><div><h3>Simulate or preview operations</h3><p>Show the proposed work and the exact operations requiring authorization.</p></div><span class="step-tag">Preview</span></li>
+          <li><span class="step-index">06</span><div><h3>Review results and authority</h3><p>Evaluate operation-specific approval and present its status for review.</p></div><span class="step-tag">Review</span></li>
+        </ol>
+        <aside class="workflow-guardrails" aria-label="Decision boundaries">
+          <div class="guardrail-title"><span class="boundary-mark" aria-hidden="true">↳</span><h3>Every gate has an honest exit.</h3></div>
+          <div class="guardrail"><span class="flow-label">Configuration invalid</span><p>Show the findings and safe recovery guidance before target inspection.</p></div>
+          <div class="guardrail"><span class="flow-label">Inspection fails or is unavailable</span><p>Keep the diagnostic visible. Stop before provider resolution and planning.</p></div>
+          <div class="guardrail"><span class="flow-label">Approval does not match</span><p>Missing, denied, expired or stale authority stays blocked.</p></div>
+          <div class="preview-boundary"><strong>A preview is a preview.</strong><p>Current CLI inspection, simulation and authorization previews do not dispatch live operations.</p><p><code>apply</code>, <code>repair apply</code> and repository tests through <code>verify</code> remain unavailable in the documented 1.0 behavior.</p></div>
+        </aside>
+      </div>
+      <details class="workflow-reference">
+        <summary>View the workflow reference table</summary>
+        <div class="workflow-table-wrap"><table>
+          <caption class="sr-only">Momentum workflow stages and their outputs</caption>
+          <thead><tr><th scope="col">Stage</th><th scope="col">What Momentum does</th><th scope="col">What you can review</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Validate</th><td>Checks the project manifest.</td><td>Validation findings and recovery guidance.</td></tr>
+            <tr><th scope="row">Inspect</th><td>Examines the target environment.</td><td>A verified, failed or unavailable inspection outcome.</td></tr>
+            <tr><th scope="row">Plan</th><td>Resolves providers for required capabilities.</td><td>An explainable workflow plan.</td></tr>
+            <tr><th scope="row">Simulate / preview</th><td>Displays the proposed operations.</td><td>Simulation output or an exact authorization request.</td></tr>
+            <tr><th scope="row">Evaluate approval</th><td>Checks authority against the prepared operation.</td><td>The approval decision and any blocking reason.</td></tr>
+            <tr><th scope="row">Review</th><td>Presents results and diagnostics.</td><td>Evidence for the next decision, without live CLI dispatch.</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+    </section>
+
+    <section class="architecture shell" id="architecture" aria-labelledby="architecture-heading">
+      <div class="section-head">
+        <p class="section-kicker">The architecture</p>
+        <h2 id="architecture-heading">One engine.<br>A connected engineering picture.</h2>
+        <p class="workflow-intro">The broader design connects interfaces, planning, providers and engineering evidence around the same core.</p>
+      </div>
+      <figure class="architecture-map" aria-label="Architectural direction: interfaces connect to Momentum Core; the core relates project knowledge, workflow planning and providers; observations feed the persistent project model.">
+        <div class="architecture-interfaces"><span>CLI</span><span>GUI</span><span>Automation</span><span class="architecture-status">Interface architecture</span></div>
+        <div class="architecture-connector" aria-hidden="true">↓</div>
+        <div class="architecture-engine"><img src="assets/momentum-logo.png" alt="" width="56" height="56"><div><span class="flow-label">Shared foundation</span><h3>Momentum Core</h3><p>Project identity · Capabilities · Authorization · Evidence</p></div></div>
+        <div class="architecture-connector" aria-hidden="true">↓</div>
+        <div class="architecture-pillars">
+          <div class="architecture-pillar future"><span class="flow-label">Architectural direction</span><h3>Persistent Digital Twin</h3><p>A connected model of project artifacts, dependencies, history and engineering knowledge.</p></div>
+          <div class="architecture-pillar"><span class="flow-label">Implemented foundations</span><h3>Workflow planning</h3><p>Describe the engineering intent, discover capabilities and prepare explicit operations.</p></div>
+          <div class="architecture-pillar"><span class="flow-label">Implemented foundations</span><h3>Replaceable providers</h3><p>Tools and execution collaborators implement capabilities. AI is an optional provider.</p></div>
+        </div>
+        <div class="architecture-feedback"><span aria-hidden="true">↺</span><div><strong>Observations → engineering evidence → project knowledge</strong><p>The intended feedback loop builds understanding from recorded facts.</p></div></div>
+        <figcaption>Architecture overview, not a feature-completion claim. Persistent Digital Twin coverage, interfaces and provider support vary by implementation.</figcaption>
+      </figure>
+      <div class="workflow-documentation"><div><strong>The complete reference, in one place.</strong><p>Workflow table, both diagrams and the current implementation boundaries.</p></div><a class="button secondary" href="docs/how-momentum-works.md" download>Download the documentation (Markdown) <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="core-panel shell" id="core">
+      <div class="core-copy">
+        <p class="section-kicker">Momentum Core 1.0</p>
+        <h2>Not a toy utility. A serious engineering workflow.</h2>
+        <p>
+          Momentum Core is focused on the part of software engineering where speed and trust need to coexist:
+          project understanding, explicit configuration, bounded execution, and evidence.
+        </p>
+      </div>
+      <div class="core-grid">
+        <div class="core-card"><strong>Project onboarding</strong><span>Discover and understand project state.</span></div>
+        <div class="core-card"><strong>Build / Test setup</strong><span>Configure commands explicitly.</span></div>
+        <div class="core-card"><strong>Configuration Preflight</strong><span>Know whether the workflow is actually ready.</span></div>
+        <div class="core-card"><strong>Bounded execution</strong><span>Keep authority constrained to the requested operation.</span></div>
+        <div class="core-card"><strong>Evidence & diagnostics</strong><span>Preserve what happened and why.</span></div>
+        <div class="core-card"><strong>Approval boundaries</strong><span>Human review where the workflow requires it.</span></div>
+      </div>
+    </section>
+
+
+    <section class="shell" id="languages">
+      <div class="section-head">
+        <p class="section-kicker">Languages</p>
+        <h2>27 language profiles planned for 1.0. Six measured so far.</h2>
+        <p class="workflow-intro">Each study gives Momentum two small command-line briefs, five trials each. Momentum writes the program, builds it, runs the tests it wrote and repairs failures; we count passes within four repair rounds. We publish what happened, not what we hope. Results below are from our own test machine, as of November 12, 2026. Further profile testing is under way.</p>
+      </div>
+      <div class="core-card" style="margin:1.25rem 0 1.5rem">
+        <strong>What this table shows, and why it matters to you</strong>
+        <span>Momentum can write programs in many languages, but a language is only useful if the program it writes actually builds and works. For each language we ask Momentum to write the same kind of small program ten times, and we record how many of those programs built and passed their tests, and how many also passed a separate check that Momentum did not write. These are real counts from our own test machine, not estimates. Before you choose a language for your project, you can see how reliably Momentum handled it. A language with no result yet is marked &ldquo;In development and testing&rdquo;, so you are never told something works that we have not measured. A language that scores below our bar is labelled Unverified.</span>
+      </div>
+      <div class="table-card"><div class="workflow-table-wrap"><table>
+        <thead><tr><th scope="col">Profile (Ubuntu target)</th><th scope="col">Passed build and its own tests within 4 repair rounds</th><th scope="col">Independent check (passing candidates)</th><th scope="col">Notes</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">TypeScript</th><td>10 of 10</td><td>10 of 10 passed</td><td><span class="tag ok">Observed result</span></td></tr>
+          <tr><th scope="row">C++</th><td>10 of 10</td><td>9 of 10 passed</td><td><span class="tag ok">Four hygiene stops; see study report</span></td></tr>
+          <tr><th scope="row">Rust</th><td>9 of 10</td><td>9 of 10 passed (within 6 rounds)</td><td><span class="tag ok">Observed result</span></td></tr>
+          <tr><th scope="row">Go</th><td>9 of 10</td><td>6 of 10 passed (within 6 rounds)</td><td><span class="tag ok">Tests the model wrote were a weak check; one hygiene stop</span></td></tr>
+          <tr><th scope="row">JavaScript</th><td>9 of 10</td><td>6 of 9 passed</td><td><span class="tag ok">Five trials used an allowed scanner exception</span></td></tr>
+          <tr><th scope="row">C</th><td>8 of 10</td><td>4 of 8 passed</td><td><span class="tag warn">Below the bar: Unverified. Two trials ended at retry-gate declines</span></td></tr>
+        </tbody>
+      </table></div></div>
+      <p class="fine"><a href="how-we-test.html">How we test, with the exact briefs we use and what terms like hygiene stop and retry-gate decline mean</a>.</p>
+      <p class="fine">How to read this: 10 runs per profile, two small briefs, one model (qwen3.6:27b), test setting temperature 0.7 (Momentum itself runs at 0). The independent check is a separate research test set Momentum did not write, run afterwards on the passing programs; it is not a feature of the product. These are observed rates, not guarantees, and say nothing about other briefs or other models.</p>
+      <h3 style="margin:2rem 0 .75rem">Still in development and testing (21 of 27)</h3>
+      <div class="table-card"><div class="workflow-table-wrap"><table>
+        <thead><tr><th scope="col">Profile</th><th scope="col">Offered in / target</th><th scope="col">Status</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Python with Tk</th><td>Mac app, Ubuntu target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">Swift with SwiftUI (macOS)</th><td>Mac app, macOS target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">C with GTK</th><td>Mac app, Ubuntu target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">C++ with GTK</th><td>Mac app, Ubuntu target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">PowerShell</th><td>Mac app, Ubuntu target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">Shell (sh)</th><td>Mac app, Ubuntu target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">Bash</th><td>Mac app, Ubuntu target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">zsh</th><td>Mac app, Ubuntu target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">C</th><td>Windows target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">C++</th><td>Windows target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">Rust</th><td>Windows target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">Go</th><td>Windows target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">JavaScript</th><td>Windows target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">TypeScript</th><td>Windows target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">PowerShell</th><td>Windows target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">Shell (sh)</th><td>Windows target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">Bash</th><td>Windows target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">zsh</th><td>Windows target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">Python with Tk</th><td>Windows target</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">Python with Tk and SQLite, Ubuntu</th><td>With SQLite</td><td><span class="tag">In development and testing</span></td></tr>
+          <tr><th scope="row">Python with Tk and SQLite, Windows</th><td>With SQLite</td><td><span class="tag">In development and testing</span></td></tr>
+          </tbody>
+      </table></div></div>
+      <p class="fine">Profiles in development and testing have no published result yet. A profile is listed with results only after its study has run and been checked.</p>
+      <div class="lang-grid">
+        <div class="core-card"><strong>Next in testing</strong><span>Python with Tk, shell (sh), Bash, zsh, PowerShell, C with GTK, C++ with GTK, Swift with SwiftUI for macOS.</span></div>
+        <div class="core-card"><strong>Windows versions</strong><span>Eleven Windows sibling profiles are planned. No Windows trial results yet.</span></div>
+        <div class="core-card"><strong>SQLite</strong><span>Python/Tk with SQLite on Ubuntu and on Windows.</span></div>
+        <div class="core-card"><strong>Below the bar</strong><span>A profile with fewer than 10 runs, or under 9 of 10, ships clearly labelled Unverified.</span></div>
+      </div>
+    </section>
+
+    <section class="shell" id="models">
+      <div class="section-head">
+        <p class="section-kicker">Models</p>
+        <h2>Which model, how good, how much memory.</h2>
+        <p class="workflow-intro">Momentum runs on a local model, so your code stays on your machine, or on a provider you choose. Here is what we have measured and what we have not.</p>
+      </div>
+      <div class="table-card"><div class="workflow-table-wrap"><table>
+        <thead><tr><th scope="col">Model</th><th scope="col">Runs</th><th scope="col">Memory needed</th><th scope="col">Quality evidence</th><th scope="col">Status</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">qwen3.6:27b</th><td>Locally, on your GPU</td><td>Tested on a 32 GB graphics card (AMD Radeon AI PRO R9700). Minimum for other machines is still being measured.</td><td>All results above: 9 or 10 of 10 on five of six profiles.</td><td><span class="tag ok">Tested for 1.0</span></td></tr>
+          <tr><th scope="row">Qwen3.6-35B-A3B</th><td>Locally</td><td>About 20 GB at 4-bit (estimate, not measured by us)</td><td>None yet. Would need its own 10-run study per profile.</td><td><span class="tag plan">Test planned after 1.0</span></td></tr>
+          <tr><th scope="row">Hosted models (your own provider account)</th><td>Provider servers</td><td>None on your machine</td><td>No Momentum trials yet, so we make no claim.</td><td><span class="tag plan">Not measured</span></td></tr>
+        </tbody>
+      </table></div></div>
+      <p class="fine">Very large models that need more memory than a graphics card holds can run from system RAM, but slowly. We are not planning on that for 1.0. Any model change gets its own measured study before we state results for it.</p>
+    </section>
+
+    <section class="principles shell">
+      <div class="section-head">
+        <p class="section-kicker">Design principles</p>
+        <h2>Fail clearly. Don’t improvise.</h2>
+      </div>
+      <div class="principle-grid">
+        <article>
+          <span>01</span>
+          <h3>No silent command guessing</h3>
+          <p>Momentum does not infer execution authority from incidental project files.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>No silent fallback</h3>
+          <p>If the required execution context is unavailable or ambiguous, Momentum should warn or block.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>No hidden project mutation</h3>
+          <p>Inspection is separate from explicitly approved configuration changes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="quote-band">
+      <div class="shell quote-inner">
+        <p class="section-kicker">Positioning</p>
+        <blockquote>
+          “AI-driven, verification-centered software engineering.”
+        </blockquote>
+        <p>
+          Momentum is built for developers who care about more than raw generation speed: the useful measure is a verified correct change, achieved with the time and effort the work actually requires.
+        </p>
+      </div>
+    </section>
+
+    <section class="availability shell" id="availability">
+      <div class="availability-main">
+        <p class="section-kicker">Momentum Core 1.0</p>
+        <h2>Mac and Windows together.</h2>
+        <p>
+          Momentum Core 1.0 is planned for macOS and Windows at the same time. A Linux version is planned about a month after 1.0.
+        </p>
+        <ul class="tick-list">
+          <li><strong>Pay once.</strong> Core 1.0 is a one-time purchase, not a subscription.</li>
+          <li><strong>12 months of updates included.</strong> That covers new versions and new language profiles released in that year.</li>
+          <li><strong>Yours to keep.</strong> Every version released during your year keeps working for good.</li>
+          <li><strong>$19.99 to renew.</strong> Optional, for another year of updates after the first.</li>
+          <li><strong>5 devices.</strong> Activate once online, then it works offline. You can move a seat yourself.</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <span class="price-label">Planned introductory price</span>
+        <div class="price">$69.95</div>
+        <p>One-time purchase for Momentum Core 1.0, with a year of updates.</p>
+        <span class="price-note">Then $19.99 per year if you want further updates. Final pricing and availability remain subject to release qualification.</span>
+      </div>
+    </section>
+
+    <section class="shell" id="pro">
+      <div class="section-head">
+        <p class="section-kicker">Planned, not built</p>
+        <h2>Momentum Pro: a later product.</h2>
+        <p class="workflow-intro">Pro is a future plan for deeper automation and larger workflows beyond Core 1.0. It is not a finished or verified feature set, and its price and upgrade terms are not set. Local Scout, verification, approvals and remote execution are part of Core and do not need Pro.</p>
+      </div>
+      <div class="table-card"><div class="workflow-table-wrap"><table>
+        <thead><tr><th scope="col">Area</th><th scope="col">In Core 1.0</th><th scope="col">Planned for Pro</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Scout</th><td>Local project analysis</td><td>Deeper analysis across projects, historical trends, continuous analysis</td></tr>
+          <tr><th scope="row">Automation</th><td>Guided build, test, verification and bounded repair</td><td>Scheduled unattended work, overnight analysis, prioritization, morning reports</td></tr>
+          <tr><th scope="row">AI coordination</th><td>Choice of model and provider</td><td>Multi-model coordination, cross-validation, performance-based routing, cost and quality policies</td></tr>
+          <tr><th scope="row">Multiple machines</th><td>Remote targets</td><td>Distributed workers, fleet management, larger test and repair workflows</td></tr>
+          <tr><th scope="row">Audit and history</th><td>Approval and execution evidence, readable history, basic export</td><td>Advanced search, retention policies, centralized history, organizational reports and integrations</td></tr>
+          <tr><th scope="row">Game development</th><td>General work on game source code</td><td>Dedicated Unity, Unreal and Godot adapters and build, test and package workflows</td></tr>
+        </tbody>
+      </table></div></div>
+    </section>
+
+    <section class="faq shell" id="faq">
+      <div class="section-head">
+        <p class="section-kicker">FAQ</p>
+        <h2>Designed to fit a developer’s existing workflow.</h2>
+      </div>
+
+      <details>
+        <summary>Does Momentum replace Xcode, VS Code, or my editor?</summary>
+        <p>No. Momentum is designed to work alongside your existing editor or IDE rather than replace it.</p>
+      </details>
+      <details>
+        <summary>Does Momentum modify my project when I open it?</summary>
+        <p>Project inspection and onboarding should remain read-only until an explicit, bounded configuration action is approved.</p>
+      </details>
+      <details>
+        <summary>Which platforms does Momentum run on?</summary>
+        <p>Core 1.0 is planned for macOS and Windows together, with Linux about a month later. A platform is only described as working for what we have actually tested.</p>
+      </details>
+      <details>
+        <summary>What happens after the first year?</summary>
+        <p>Everything released during your first year keeps working, permanently. If you want newer versions and new language profiles after that, renewal is $19.99 for another year. It is optional.</p>
+      </details>
+      <details>
+        <summary>Does Momentum need to be online?</summary>
+        <p>Only to activate. After that the license is checked on your machine, with a 30-day grace period if a check ever cannot be completed. Up to five of your devices can use one license, and you can free a seat yourself.</p>
+      </details>
+      <details>
+        <summary>Is Momentum “vibe coding”?</summary>
+        <p>No. Momentum is being positioned as AI-driven, verification-centered software engineering: faster development with explicit configuration, bounded actions, and evidence.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <div class="footer-left">
+      <a class="brand" href="#top">
+        <img src="assets/momentum-logo.png" alt="" class="brand-logo">
+        <span>Momentum</span>
+      </a>
+      <p>Verification-centered software engineering.</p>
+    </div>
+    <div class="footer-right">
+      <span>getMomentum.dev</span>
+      <span>Pre-release product preview</span>
+      <a href="privacy.html">Privacy Statement</a>
+      <a href="how-we-test.html">How we test</a>
+    </div>
+  </footer>
+</body>
+</html>
