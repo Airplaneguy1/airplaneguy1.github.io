@@ -208,26 +208,26 @@
     <section class="shell" id="languages">
       <div class="section-head">
         <p class="section-kicker">Languages</p>
-        <h2>27 language profiles planned for 1.0. Six measured so far.</h2>
-        <p class="workflow-intro">Each study gives Momentum two small command-line briefs, five trials each. Momentum writes the program, builds it, runs the tests it wrote and repairs failures; we count passes within four repair rounds. We publish what happened, not what we hope. Results below are from our own test machine, as of November 12, 2026. Further profile testing is under way.</p>
+        <h2>27 language profiles planned for 1.0. Four measured so far, two being re-tested.</h2>
+        <p class="workflow-intro">Each study gives Momentum two small command-line briefs, ten trials in all. Momentum writes the program, builds it, runs the tests it wrote and repairs failures. A trial counts only if it finishes within four repair rounds and also passes a separate fixed acceptance suite that Momentum did not write. All ten planned trials stay in the count. We publish what happened, not what we hope. Results below are from studies run on November 15, 2026 on our own test machine, with the model qwen3.6:27b. Further profile testing is under way.</p>
       </div>
       <div class="core-card" style="margin:1.25rem 0 1.5rem">
         <strong>What this table shows, and why it matters to you</strong>
-        <span>Momentum can write programs in many languages, but a language is only useful if the program it writes actually builds and works. For each language we ask Momentum to write the same kind of small program ten times, and we record how many of those programs built and passed their tests, and how many also passed a separate check that Momentum did not write. These are real counts from our own test machine, not estimates. Before you choose a language for your project, you can see how reliably Momentum handled it. A language with no result yet is marked &ldquo;In development and testing&rdquo;, so you are never told something works that we have not measured. A language that scores below our bar is labelled Unverified.</span>
+        <span>A language is only useful if the program Momentum writes actually builds and works. For each language we ask Momentum to write small programs ten times and count how many build, finish within four repair rounds and pass the separate acceptance suite. These are real counts from our own tests on these briefs and this model. They are not guarantees for your project, other briefs, other models or other machines.</span>
       </div>
       <div class="table-card"><div class="workflow-table-wrap"><table>
-        <thead><tr><th scope="col">Profile (Ubuntu target)</th><th scope="col">Passed build and its own tests within 4 repair rounds</th><th scope="col">Independent check (passing candidates)</th><th scope="col">Notes</th></tr></thead>
+        <thead><tr><th scope="col">Profile (Ubuntu target)</th><th scope="col">Built and passed the fixed acceptance suite within 4 repair rounds</th><th scope="col">Label</th><th scope="col">Notes</th></tr></thead>
         <tbody>
-          <tr><th scope="row">TypeScript</th><td>10 of 10</td><td>10 of 10 passed</td><td><span class="tag ok">Observed result</span></td></tr>
-          <tr><th scope="row">C++</th><td>10 of 10</td><td>9 of 10 passed</td><td><span class="tag ok">Four hygiene stops; see study report</span></td></tr>
-          <tr><th scope="row">Rust</th><td>9 of 10</td><td>9 of 10 passed (within 6 rounds)</td><td><span class="tag ok">Observed result</span></td></tr>
-          <tr><th scope="row">Go</th><td>9 of 10</td><td>6 of 10 passed (within 6 rounds)</td><td><span class="tag ok">Tests the model wrote were a weak check; one hygiene stop</span></td></tr>
-          <tr><th scope="row">JavaScript</th><td>9 of 10</td><td>6 of 9 passed</td><td><span class="tag ok">Five trials used an allowed scanner exception</span></td></tr>
-          <tr><th scope="row">C</th><td>8 of 10</td><td>4 of 8 passed</td><td><span class="tag warn">Below the bar: Unverified. Two trials ended at retry-gate declines</span></td></tr>
+          <tr><th scope="row">C</th><td>6 of 10</td><td><span class="tag warn">Works with limits</span></td><td>qwen3.6:27b</td></tr>
+          <tr><th scope="row">C++</th><td>8 of 10</td><td><span class="tag warn">Works with limits</span></td><td>qwen3.6:27b. A 20-trial confirmation run is planned before this label is final.</td></tr>
+          <tr><th scope="row">TypeScript</th><td>5 of 10</td><td><span class="tag warn">Works with limits</span></td><td>qwen3.6:27b</td></tr>
+          <tr><th scope="row">JavaScript</th><td>5 of 10</td><td><span class="tag warn">Works with limits</span></td><td>qwen3.6:27b</td></tr>
+          <tr><th scope="row">Rust</th><td>In development and testing</td><td><span class="tag plan">untested</span></td><td>No current result is shown.</td></tr>
+          <tr><th scope="row">Go</th><td>In development and testing</td><td><span class="tag plan">untested</span></td><td>No current result is shown.</td></tr>
         </tbody>
       </table></div></div>
       <p class="fine"><a href="how-we-test.html">How we test, with the exact briefs we use and what terms like hygiene stop and retry-gate decline mean</a>.</p>
-      <p class="fine">How to read this: 10 runs per profile, two small briefs, one model (qwen3.6:27b), test setting temperature 0.7 (Momentum itself runs at 0). The independent check is a separate research test set Momentum did not write, run afterwards on the passing programs; it is not a feature of the product. These are observed rates, not guarantees, and say nothing about other briefs or other models.</p>
+      <p class="fine">How to read this: 10 trials per profile, two small briefs, one model (qwen3.6:27b). The acceptance suite is a separate test set Momentum did not write; it is not a feature of the product and its contents are not published. These are observed rates on these briefs and this model, not guarantees. A label is a label, not a lock: you can still choose a language that has a lower label, and Experimental ones ask for a one-line confirmation first.</p>
       <h3 style="margin:2rem 0 .75rem">Still in development and testing (21 of 27)</h3>
       <div class="table-card"><div class="workflow-table-wrap"><table>
         <thead><tr><th scope="col">Profile</th><th scope="col">Offered in / target</th><th scope="col">Status</th></tr></thead>
@@ -260,7 +260,7 @@
         <div class="core-card"><strong>Next in testing</strong><span>Python with Tk, shell (sh), Bash, zsh, PowerShell, C with GTK, C++ with GTK, Swift with SwiftUI for macOS.</span></div>
         <div class="core-card"><strong>Windows versions</strong><span>Eleven Windows sibling profiles are planned. No Windows trial results yet.</span></div>
         <div class="core-card"><strong>SQLite</strong><span>Python/Tk with SQLite on Ubuntu and on Windows.</span></div>
-        <div class="core-card"><strong>Below the bar</strong><span>A profile with fewer than 10 runs, or under 9 of 10, ships clearly labelled Unverified.</span></div>
+        <div class="core-card"><strong>Labels</strong><span>Recommended: 9 or 10 of 10. Works with limits: 4 to 8 of 10. Experimental: 3 or fewer. A language or model we have not tested says untested.</span></div>
       </div>
     </section>
 
@@ -273,9 +273,9 @@
       <div class="table-card"><div class="workflow-table-wrap"><table>
         <thead><tr><th scope="col">Model</th><th scope="col">Runs</th><th scope="col">Memory needed</th><th scope="col">Quality evidence</th><th scope="col">Status</th></tr></thead>
         <tbody>
-          <tr><th scope="row">qwen3.6:27b</th><td>Locally, on your GPU</td><td>Tested on a 32 GB graphics card (AMD Radeon AI PRO R9700). Minimum for other machines is still being measured.</td><td>All results above: 9 or 10 of 10 on five of six profiles.</td><td><span class="tag ok">Tested for 1.0</span></td></tr>
-          <tr><th scope="row">Qwen3.6-35B-A3B</th><td>Locally</td><td>About 20 GB at 4-bit (estimate, not measured by us)</td><td>None yet. Would need its own 10-run study per profile.</td><td><span class="tag plan">Test planned after 1.0</span></td></tr>
-          <tr><th scope="row">Hosted models (your own provider account)</th><td>Provider servers</td><td>None on your machine</td><td>No Momentum trials yet, so we make no claim.</td><td><span class="tag plan">Not measured</span></td></tr>
+          <tr><th scope="row">qwen3.6:27b</th><td>Locally, on your GPU</td><td>Tested on a 32 GB graphics card (AMD Radeon AI PRO R9700). Minimum for other machines is still being measured.</td><td>Results above: 5 to 8 of 10 on the four measured profiles.</td><td><span class="tag ok">Tested for 1.0</span></td></tr>
+          <tr><th scope="row">Qwen3.6-35B-A3B</th><td>Locally</td><td>About 20 GB at 4-bit (estimate, not measured by us)</td><td>None yet. Would need its own 10-run study per profile.</td><td><span class="tag plan">untested</span></td></tr>
+          <tr><th scope="row">Hosted models (your own provider account)</th><td>Provider servers</td><td>None on your machine</td><td>No Momentum trials yet, so we make no claim.</td><td><span class="tag plan">untested</span></td></tr>
         </tbody>
       </table></div></div>
       <p class="fine">Very large models that need more memory than a graphics card holds can run from system RAM, but slowly. We are not planning on that for 1.0. Any model change gets its own measured study before we state results for it.</p>
