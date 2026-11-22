@@ -20,6 +20,14 @@
 <li><strong>Smarter guards.</strong> Momentum checks what the AI writes before it runs. Testing shows when a guard raises a false alarm on harmless code, which would block real users, and when it correctly catches something risky. We tune it both ways.</li>
 <li><strong>Honest language support.</strong> The results show where a language works well on local models and where it is slower or less reliable, so we can say plainly what to expect.</li>
 </ul>
+<h2>What about AI drift?</h2>
+<p>"Drift" can mean three different things, and Momentum treats them differently.</p>
+<ul>
+<li><strong>Drifting away from what you asked for.</strong> Momentum contains this. Every program is built and tested against your description, a failed test sends the AI back to repair it, and guards and your consent stop it from touching anything you didn't approve. This reduces drift. It does not remove it, which is why our studies score results with a separate checker the AI never sees.</li>
+<li><strong>A model changing over time.</strong> Momentum cannot stop a model from changing when it is updated, but we can measure it. Our fixed tests give a recorded baseline for a pinned model, so a new model or version can be run through the same tests and compared before we recommend it.</li>
+<li><strong>Randomness between runs.</strong> Momentum's own steps run at temperature 0 to keep them steady. Our studies deliberately use a higher setting so we measure the real spread, and we repeat runs so a pass rate tells you more than one lucky result.</li>
+</ul>
+<p>We don't claim Momentum prevents AI drift. We claim it catches it, contains it and measures it.</p>
 <h2>Safe on your machine</h2>
 <p>Every study run also checks the promises Momentum makes to you: nothing is left running and every resource is released when the work ends. We watch this hold up run after run, not just in a demo.</p>
 <h2>Why this matters to you</h2>
