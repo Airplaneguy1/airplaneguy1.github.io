@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why we test the way we do | Momentum</title>
+<meta name="description" content="Why Momentum is tested the way it is: what testing teaches us, and why the check, repair and consent layer around the AI matters.">
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:48rem;margin:2rem auto;padding:0 1rem;color:#1b1b1b}h1,h2,h3{line-height:1.25}a{color:#0b5cad}</style></head>
+<body>
+<p><a href="index.html#why">&larr; Why Momentum</a></p>
+<h1>Why Momentum is tested the way it is</h1>
+<h2>The problem with AI-written programs</h2>
+<p>Asking an AI to write a program is easy. Knowing the program works is the hard part. It can look right, compile, and still fail on the awkward inputs: an empty value, a stray tab, a Windows line ending. It can also quietly do something you never agreed to.</p>
+<p>Momentum is built around that gap. You describe what you want. Momentum has an AI generate the program, build it, test it and repair it in a loop, with guards and your consent before anything changes. The loop is only worth trusting if it has been pushed hard first.</p>
+<h2>How we test it</h2>
+<p>For each language Momentum supports, we run the same kind of trial a user would trigger. A local model is given a task and writes the code, and the code is built and run. We then score it with a checker the model never sees, so it can't pass by guessing what we look for.</p>
+<p>We repeat this many times per language, because one lucky run proves nothing. We record how often the result is right, how long it takes and how fast the model works on ordinary hardware. The exact method, briefs and terms are on <a href="how-we-test.html">How we test</a>.</p>
+<h2>What a failure gives us</h2>
+<p>A failed trial is useful. We read why it failed and change something in Momentum:</p>
+<ul>
+<li><strong>Clearer instructions to the AI.</strong> If the model keeps missing the same cases, we check whether the model is weak or our request was ambiguous. Often we fix the request, and every user benefits.</li>
+<li><strong>A better repair loop.</strong> We learn which mistakes the loop fixes by itself and which it can't, and we improve the repair step where it falls short.</li>
+<li><strong>Smarter guards.</strong> Momentum checks what the AI writes before it runs. Testing shows when a guard raises a false alarm on harmless code, which would block real users, and when it correctly catches something risky. We tune it both ways.</li>
+<li><strong>Honest language support.</strong> The results show where a language works well on local models and where it is slower or less reliable, so we can say plainly what to expect.</li>
+</ul>
+<h2>Safe on your machine</h2>
+<p>Every study run also checks the promises Momentum makes to you: nothing is left running and every resource is released when the work ends. We watch this hold up run after run, not just in a demo.</p>
+<h2>Why this matters to you</h2>
+<p>If you are deciding whether you need Momentum, the question is not whether an AI can write code. It can. The question is who checks the result, who repairs it, and who stops it from touching things you didn't approve. Momentum is the checking, repair and consent layer around the AI. This testing is how we keep that layer honest.</p>
+<p><small>© 2026 Roger Hoyt. All rights reserved. Momentum™ is a trademark of Roger Hoyt.</small></p>
+</body></html>
