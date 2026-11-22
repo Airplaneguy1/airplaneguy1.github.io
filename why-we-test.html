@@ -6,9 +6,10 @@
 <body>
 <p><a href="index.html#why">&larr; Why Momentum</a></p>
 <h1>Why Momentum is tested the way it is</h1>
+<p><em>Momentum is a pre-release product preview. This page explains what our testing is for and what it has taught us. It is not a list of finished features; the <a href="index.html#faq">home page</a> says what the current command-line tool does and does not do.</em></p>
 <h2>The problem with AI-written programs</h2>
 <p>Asking an AI to write a program is easy. Knowing the program works is the hard part. It can look right, compile, and still fail on the awkward inputs: an empty value, a stray tab, a Windows line ending. It can also quietly do something you never agreed to.</p>
-<p>Momentum is built around that gap. You describe what you want. Momentum has an AI generate the program, build it, test it and repair it in a loop, with guards and your consent before anything changes. The loop is only worth trusting if it has been pushed hard first.</p>
+<p>Momentum is designed around that gap. You describe what you want, and the intended workflow has an AI generate the program, build it, test it and repair it in a loop, with guards and your consent before anything changes. A loop like that is only worth trusting if it has been pushed hard first, and that is what our testing is for.</p>
 <h2>How we test it</h2>
 <p>For each language Momentum supports, we run the same kind of trial a user would trigger. A local model is given a task and writes the code, and the code is built and run. We then score it with a checker the model never sees, so it can't pass by guessing what we look for.</p>
 <p>We repeat this many times per language, because one lucky run proves nothing. We record how often the result is right, how long it takes and how fast the model works on ordinary hardware. The exact method, briefs and terms are on <a href="how-we-test.html">How we test</a>.</p>
@@ -23,14 +24,14 @@
 <h2>What about AI drift?</h2>
 <p>"Drift" can mean three different things, and Momentum treats them differently.</p>
 <ul>
-<li><strong>Drifting away from what you asked for.</strong> Momentum contains this. Every program is built and tested against your description, a failed test sends the AI back to repair it, and guards and your consent stop it from touching anything you didn't approve. This reduces drift. It does not remove it, which is why our studies score results with a separate checker the AI never sees.</li>
+<li><strong>Drifting away from what you asked for.</strong> This is what the design is meant to contain: programs are built and tested against your description, a failed test sends the AI back to repair it, and consent is required before changes. That is the design, and parts of it are still in preview. Even when it works it reduces drift and does not remove it, which is why our studies score results with a separate checker the AI never sees.</li>
 <li><strong>A model changing over time.</strong> Momentum cannot stop a model from changing when it is updated, but we can measure it. Our fixed tests give a recorded baseline for a pinned model, so a new model or version can be run through the same tests and compared before we recommend it.</li>
 <li><strong>Randomness between runs.</strong> Momentum's own steps run at temperature 0 to keep them steady. Our studies deliberately use a higher setting so we measure the real spread, and we repeat runs so a pass rate tells you more than one lucky result.</li>
 </ul>
-<p>We don't claim Momentum prevents AI drift. We claim it catches it, contains it and measures it.</p>
+<p>We don't claim Momentum prevents AI drift. What we can say today is that our own testing measures it. The workflow is designed to catch and contain it. <strong>Our drift measurements come from our own testing, not from a monitor inside the app.</strong></p>
 <h2>Safe on your machine</h2>
-<p>Every study run also checks the promises Momentum makes to you: nothing is left running and every resource is released when the work ends. We watch this hold up run after run, not just in a demo.</p>
+<p>Our study runs also check that the work ends cleanly: nothing is left running and every resource is released. We watch for this run after run, not just in a demo.</p>
 <h2>Why this matters to you</h2>
-<p>If you are deciding whether you need Momentum, the question is not whether an AI can write code. It can. The question is who checks the result, who repairs it, and who stops it from touching things you didn't approve. Momentum is the checking, repair and consent layer around the AI. This testing is how we keep that layer honest.</p>
+<p>If you are deciding whether you need Momentum, the question is not whether an AI can write code. It can. The question is who checks the result, who repairs it, and who stops it from touching things you didn't approve. Momentum is being built as the checking, repair and consent layer around the AI, and this testing is how we keep that work honest.</p>
 <p><small>© 2026 Roger Hoyt. All rights reserved. Momentum™ is a trademark of Roger Hoyt.</small></p>
 </body></html>
